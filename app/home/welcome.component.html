@@ -1,0 +1,20 @@
+﻿<div class="panel panel-primary">
+    <div class="panel-heading">
+        Welcome {{empName}} to Registration Portal
+    </div>
+    <div class="panel-body"  >
+<form *ngIf="formActive" [ngFormModel]="employeeForm" (ngSubmit)="onSubmitForm()">
+    <section class="employee-name">
+         <input type="text" placeholder="Enter Name" ngControl="employeeName" #employeeName="ngForm" [(ngModel)]='empName' >
+    </section>
+    <section clas="designation">
+        <input type="text" placeholder="Enter Designation" ngControl="designation" #designation="ngForm"> 
+    </section>
+    <section clas="city">
+        <input type="text" placeholder="Enter City" ngControl="city" #city="ngForm"> 
+    </section>
+    <button type="submit">Enter Details</button>
+    <button type="button" (click)="onClearForm()">Reset</button>
+</form>
+</div>
+</div>
